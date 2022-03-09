@@ -1,0 +1,8 @@
+{
+  "name": "controleRotaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "66fd9a6b"
+}
