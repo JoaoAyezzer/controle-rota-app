@@ -4,11 +4,18 @@ import { API_CONFIG } from './../../config/api.config';
 import { CredenciaisDTO } from './../models/credenciais.dto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import jwt_decode, { JwtPayload } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  
+  jwtPayload: JwtPayload = {
+    sub: '',
+    exp: null
+  }
 
   constructor(
     private http: HttpClient,
@@ -25,8 +32,10 @@ export class AuthService {
 
   successfulLogin(authorizationValue: string){
     let tok = authorizationValue.substring(7);
+    this.jwtPayload = jwt_decode(tok)
     let user : LocalUser = {
-      token: tok
+      token: tok,
+      email!: this.jwtPayload.sub
     };
     this.storage.setLocalUser(user);
   }

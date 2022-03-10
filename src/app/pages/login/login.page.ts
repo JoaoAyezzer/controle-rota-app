@@ -26,7 +26,8 @@ export class LoginPage implements OnInit {
         this.authService.successfulLogin(Response.headers.get('Authorization'));
       },
       error => {}
-    );
+    )
+    
   }
 
 }

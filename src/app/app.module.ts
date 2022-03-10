@@ -1,3 +1,4 @@
+import { TabsNavigationPageModule } from './pages/tabs-navigation/tabs-navigation.module';
 import { StorageService } from './services/storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
@@ -17,7 +18,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule, 
     IonicModule.forRoot(),
-    AppRoutingModule],
+    AppRoutingModule,
+    TabsNavigationPageModule
+  ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService,
