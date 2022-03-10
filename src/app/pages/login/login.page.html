@@ -2,12 +2,23 @@
 <form>
   <ion-img src="../../../assets/logo-login.svg"></ion-img>
   <ion-item>
-    <ion-label>Email</ion-label>
-    <ion-input clear-input="true" inputmode="email" ionFocus="false" placeholder=" exemplo@exemplo.com"></ion-input>
+    <ion-label stacked >Email</ion-label>
+    <ion-input 
+      [(ngModel)]="credenciais.email" 
+      name="email"
+      clear-input="true"
+      placeholder=" exemplo@exemplo.com"
+      type="text">
+    </ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Senha</ion-label>
-    <ion-input placeholder=" sua senha"></ion-input>
+    <ion-label stacked >Senha</ion-label>
+    <ion-input 
+      [(ngModel)]="credenciais.senha" 
+      name="senha"
+      placeholder=" sua senha"
+      type="password">
+    </ion-input>
   </ion-item>
-  <ion-button color="success">Login</ion-button>
+  <ion-button color="success" (click)="login()" >Login</ion-button>
 </form>

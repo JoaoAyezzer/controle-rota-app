@@ -1,10 +1,9 @@
-import { TabsNavigationPage } from './pages/tabs-navigation/tabs-navigation.page';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'navigation',
     loadChildren: () => import('./pages/tabs-navigation/tabs-navigation.module').then( m => m.TabsNavigationPageModule)
   },
   {

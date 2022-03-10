@@ -1,4 +1,7 @@
+import { AuthService } from 'src/app/services/auth.service';
+import { CredenciaisDTO } from './../../models/credenciais.dto';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  public credenciais: CredenciaisDTO = {
+    email: '',
+    senha: ''
+  };
+
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
+  }
+  login(){
+    this.authService.authenticate(this.credenciais)
+    .subscribe(
+      Response => {
+        console.log(Response.headers.get('Authorization'));
+      },
+      error => {}
+    )
   }
 
 }
