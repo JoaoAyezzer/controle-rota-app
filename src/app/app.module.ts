@@ -1,3 +1,4 @@
+import { StorageService } from './services/storage.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { NgModule } from '@angular/core';
@@ -19,7 +20,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AuthService
+    AuthService,
+    StorageService
   ],
   bootstrap: [AppComponent],
 })

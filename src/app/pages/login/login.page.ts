@@ -23,10 +23,10 @@ export class LoginPage implements OnInit {
     this.authService.authenticate(this.credenciais)
     .subscribe(
       Response => {
-        console.log(Response.headers.get('Authorization'));
+        this.authService.successfulLogin(Response.headers.get('Authorization'));
       },
       error => {}
-    )
+    );
   }
 
 }
