@@ -1,0 +1,41 @@
+ion-tabs{
+  
+}
+ion-tab-bar{
+    background-color: #285275;
+    border: none;
+    display: flex;
+    position: relative;
+    border-top: 2px solid #29A6D6;
+    z-index: -1;
+}
+ion-tab-button {
+    background-color: transparent;
+    --color-focused: #fff;
+    --color-selected: #fff;
+    --color: rgba(255, 255, 255, 0.6); 
+
+}
+.calendario{
+    color: #285275;
+}
+ion-fab-button{
+    --border-style: solid;
+    --border-color: #285275;
+    --border-width: 2px;
+    --background: #fff;
+    --background-activated: #fff;
+    --background-focused: #fff;
+    margin-bottom: 0.5rem;
+}
+.carro-button{
+    margin-right: 4rem;
+}
+ion-img{
+    position: absolute;
+    width: 18rem;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 4rem;
+}

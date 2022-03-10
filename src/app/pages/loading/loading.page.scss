@@ -1,0 +1,19 @@
+ion-content{
+    --background: #285275;
+}
+ion-img{
+    width: 16rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+ion-spinner{
+    --color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+   
+}

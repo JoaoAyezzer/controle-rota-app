@@ -1,0 +1,26 @@
+<ion-tabs>
+  <ion-img src="../../../assets/logo-home.png"></ion-img>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button [routerLink]="['/agendamento']" routerLinkActive="router-link-active">
+      <ion-icon class="calendario" name="calendar"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<!-- 
+  <ion-tab-button class="agenda" tab="contact">
+    <ion-icon class="calendario" name="calendar" [routerLink]="['/agendamento']" routerLinkActive="router-link-active" ></ion-icon>
+  </ion-tab-button> -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="gotoHome()">
+      <ion-icon name="home" ></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="carro" class="carro-button"[routerLink]="['/carro']" routerLinkActive="router-link-active">
+      <ion-icon name="car" ></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="despesa" class="despesa-button" [routerLink]="['/despesa']" routerLinkActive="router-link-active">
+      <ion-icon name="calculator"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="perfil" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,7 +1,8 @@
 {
   "name": "controleRotaApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular",
   "id": "66fd9a6b"
