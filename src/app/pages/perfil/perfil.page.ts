@@ -1,4 +1,4 @@
-import { TecnicoDetailDTO } from 'src/app/models/tecnico.detail.dto';
+import { TecnicoDTO } from 'src/app/models/tecnico.dto';
 import { TecnicoService } from './../../services/domain/tecnico.service';
 import { StorageService } from './../../services/storage.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,24 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilPage implements OnInit{
 
-  tecnico: TecnicoDetailDTO = {
+  tecnico: TecnicoDTO = {
     id: '',
     nome: '',
     email: '',
     tipoTecnico: '',
-    telefones: [],
-    visitas: []
+    telefones: []
   };
 
   ngOnInit() {
-  }
-
-  constructor(
-    private storage: StorageService,
-    private tecnicoService: TecnicoService
-  ) { }
-
-  ionViewDidEnter(){
     let localUser = this.storage.getLocalUser();
     if (localUser && localUser.email) {
       this.tecnicoService.findByEmail(localUser.email)
@@ -37,4 +28,10 @@ export class PerfilPage implements OnInit{
         error => {});  
     }
   }
+
+  constructor(
+    private storage: StorageService,
+    private tecnicoService: TecnicoService
+  ) { }
+
 }

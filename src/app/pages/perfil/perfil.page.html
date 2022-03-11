@@ -4,7 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  {{tecnico.nome}}
+<ion-content padding>
+  <ion-avatar>
+    <ion-img [src]="tecnico?.imageUrl || 'assets/default-avatar.png'"></ion-img>
+  </ion-avatar>
+  <ion-fab slot="fixed" >
+    <ion-fab-button size="small">
+        <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <h1>{{tecnico.nome| uppercase}}</h1>
+  <h2>{{ tecnico.email }}</h2>
 
 </ion-content>

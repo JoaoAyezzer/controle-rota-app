@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { CredenciaisDTO } from './../../models/credenciais.dto';
 import { Component, OnInit } from '@angular/core';
@@ -10,12 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  forgotPassword: boolean = false;
+
   public credenciais: CredenciaisDTO = {
     email: '',
     senha: ''
   };
 
-  constructor(public authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private navCrl: NavController
+    ) { }
 
   ngOnInit() {
   }
@@ -24,10 +30,18 @@ export class LoginPage implements OnInit {
     .subscribe(
       Response => {
         this.authService.successfulLogin(Response.headers.get('Authorization'));
+        this.navCrl.navigateForward('navigation')
       },
       error => {}
     )
     
+  }
+  resetPassword(){
+
+  }
+  forgot(){
+    this.forgotPassword = (this.forgotPassword) ? false : true
+
   }
 
 }

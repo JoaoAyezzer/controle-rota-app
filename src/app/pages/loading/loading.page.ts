@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadingPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+    this.navigateTo();
+  }
+
+  navigateTo(){
+    setTimeout( () => {
+      this.navCtrl.navigateRoot('login')
+    }, 2000);
   }
 
 }

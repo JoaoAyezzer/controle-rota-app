@@ -1,5 +1,5 @@
 
-<form>
+<form class="ion-padding">
   <ion-img src="../../../assets/logo-login.svg"></ion-img>
   <ion-item>
     <ion-label stacked >Email</ion-label>
@@ -11,7 +11,7 @@
       type="text">
     </ion-input>
   </ion-item>
-  <ion-item>
+  <ion-item *ngIf="!forgotPassword" >
     <ion-label stacked >Senha</ion-label>
     <ion-input 
       [(ngModel)]="credenciais.senha" 
@@ -20,5 +20,20 @@
       type="password">
     </ion-input>
   </ion-item>
-  <ion-button color="success" (click)="login()" >Login</ion-button>
+  <ion-button 
+    color="success" 
+    (click)="(!forgotPassword) ? login() : resetPassword()" >
+    {{ (!forgotPassword) ? 'LOGIN' :'ENVIAR'}}
+  </ion-button>
+  <ion-button 
+    fill="outline"
+    *ngIf="forgotPassword"
+    (click)="forgot()" >
+    CANCELAR
+  </ion-button>
+  <span 
+    *ngIf="!forgotPassword"
+    (click)="forgot()" >
+    Esqueci a senha
+  </span>
 </form>

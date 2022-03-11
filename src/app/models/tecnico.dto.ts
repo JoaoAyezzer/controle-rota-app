@@ -1,11 +1,9 @@
-import { VisitaDTO } from './vista.dto';
-export interface TecnicoDetailDTO{
+export interface TecnicoDTO{
     id: string;
     nome: string;
     email: string;
     tipoTecnico: string;
     telefones: string[];
-    visitas: VisitaDTO[];
     imageUrl?: string;
 
 }
