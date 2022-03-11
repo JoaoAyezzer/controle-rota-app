@@ -1,3 +1,4 @@
+import { TecnicoService } from './services/domain/tecnico.service';
 import { TabsNavigationPageModule } from './pages/tabs-navigation/tabs-navigation.module';
 import { StorageService } from './services/storage.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService,
-    StorageService
+    StorageService,
+    TecnicoService
   ],
   bootstrap: [AppComponent],
 })
