@@ -9,11 +9,12 @@
     <ion-img [src]="tecnico?.imageUrl || 'assets/default-avatar.png'"></ion-img>
   </ion-avatar>
   <ion-fab slot="fixed" >
-    <ion-fab-button size="small">
-        <ion-icon name="create"></ion-icon>
+    <ion-fab-button >
+        <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <h1>{{tecnico.nome| uppercase}}</h1>
+  <h1>{{tecnico.nome}}</h1>
   <h2>{{ tecnico.email }}</h2>
+  <h3>{{tecnico.tipoTecnico}}</h3>
 
 </ion-content>
