@@ -1,3 +1,5 @@
+import { NavController } from '@ionic/angular';
+import { DespesaService } from './../../services/domain/despesa.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DespesaPage implements OnInit {
 
-  constructor() { }
+
+  constructor(
+    private despesaService: DespesaService,
+    private navCtrl: NavController
+    ) { }
 
   ngOnInit() {
+    this.despesaService.findAll()
+      .subscribe( Response => {
+        console.log(Response)
+      },
+      error => {} )
   }
-
 }

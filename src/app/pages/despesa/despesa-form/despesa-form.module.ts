@@ -1,23 +1,20 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DespesaPageRoutingModule } from './despesa-routing.module';
+import { DespesaFormPageRoutingModule } from './despesa-form-routing.module';
 
-import { DespesaPage } from './despesa.page';
+import { DespesaFormPage } from './despesa-form.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DespesaPageRoutingModule,
+    DespesaFormPageRoutingModule
   ],
-  declarations: [
-    DespesaPage,
-  ]
+  declarations: [DespesaFormPage]
 })
-export class DespesaPageModule {}
+export class DespesaFormPageModule {}

@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: DespesaPage
+  },
+  {
+    path: 'despesa-form',
+    loadChildren: () => import('./despesa-form/despesa-form.module').then( m => m.DespesaFormPageModule)
   }
 ];
 

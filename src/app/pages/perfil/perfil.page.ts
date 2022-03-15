@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { TecnicoDTO } from 'src/app/models/tecnico.dto';
 import { TecnicoService } from './../../services/domain/tecnico.service';
 import { StorageService } from './../../services/storage.service';
@@ -31,7 +32,14 @@ export class PerfilPage implements OnInit{
 
   constructor(
     private storage: StorageService,
-    private tecnicoService: TecnicoService
+    private tecnicoService: TecnicoService,
+    private navCrl: NavController
   ) { }
+
+  logout(): void{
+    this.storage.setLocalUser(null);
+    this.navCrl.navigateRoot("/")
+  }
+
 
 }

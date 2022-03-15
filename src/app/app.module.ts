@@ -1,3 +1,4 @@
+import { DespesaService } from './services/domain/despesa.service';
 import { TecnicoService } from './services/domain/tecnico.service';
 import { TabsNavigationPageModule } from './pages/tabs-navigation/tabs-navigation.module';
 import { StorageService } from './services/storage.service';
@@ -28,6 +29,7 @@ import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
     AuthService,
     StorageService,
     TecnicoService,
+    DespesaService,
     AuthInterceptorProvider
   ],
   bootstrap: [AppComponent],
