@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carro.page.scss'],
 })
 export class CarroPage implements OnInit {
+  
+  click: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  kmControl(){
+    this.click = (this.click) ? false : true;
+  }
+
 
 }

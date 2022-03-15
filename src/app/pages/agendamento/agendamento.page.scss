@@ -1,7 +1,9 @@
 ion-header{
-    background-color: transparent;
-}
-ion-toolbar{
-    background-color: transparent;
-
+    ion-toolbar{
+        ion-img{
+            width: 10rem;
+            margin: auto;
+            padding: 1rem;
+        }
+    }
 }

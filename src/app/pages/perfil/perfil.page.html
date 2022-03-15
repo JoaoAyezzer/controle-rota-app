@@ -1,20 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>perfil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ion-button class="voltar">
+  <ion-icon name="arrow-back"></ion-icon>
+</ion-button>
 <ion-content padding>
   <ion-avatar>
     <ion-img [src]="tecnico?.imageUrl || 'assets/default-avatar.png'"></ion-img>
   </ion-avatar>
   <ion-fab slot="fixed" >
     <ion-fab-button >
-        <ion-icon name="add"></ion-icon>
+        <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
   <h1>{{tecnico.nome}}</h1>
-  <h2>{{ tecnico.email }}</h2>
-  <h3>{{tecnico.tipoTecnico}}</h3>
+  <h2>{{tecnico.tipoTecnico}}</h2>
+  <h3>{{ tecnico.email }}</h3>
+  <div>
+    <ion-button>Despesas</ion-button>
+    <ion-button>Visitas</ion-button>
+    <ion-button>Meus Clientes</ion-button>
+    <ion-button>Mudar Senha</ion-button>
+  </div>
 
 </ion-content>

@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>carro</ion-title>
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-img src="../../../assets/logo-loading.svg"></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-back-button></ion-back-button>
+  <div class="title-page">
+    <ion-icon size="large" color="primary" name="car"></ion-icon>
+    <ion-text>Veiculos</ion-text>
+  </div>
+  <div class="menu" >
+    <ion-button *ngIf="!click" (click)="kmControl()" >Controle de kilometragem</ion-button>
+    <div class="km-click" *ngIf="click">
+      <ion-button class="icon" (click)="kmControl()" >
+        <ion-icon name="speedometer-outline" size="large"></ion-icon>
+      </ion-button>
+      <ion-button class="iniciar" color="success">Iniciar</ion-button>
+      <ion-button class="finalizar" color="danger">Finalizar</ion-button>
+      
+    </div>
+
+    <ion-button>Controle de abastecimento</ion-button>
+    <ion-button>Solicitar limpeza</ion-button>
+    <ion-button>Informar defeito</ion-button>
+  </div>
 
 </ion-content>
