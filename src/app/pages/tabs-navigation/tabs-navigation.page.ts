@@ -11,10 +11,10 @@ export class TabsNavigationPage implements OnInit {
 
   constructor(private navCrl: NavController) { }
 
+  
   ngOnInit() {
     
   }
-
   gotoHome(){
     // this.ionNav.push
   }

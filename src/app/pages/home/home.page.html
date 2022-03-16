@@ -5,17 +5,30 @@
 </ion-header>
 <ion-content color="primary">
   <div class="container">
-    <ion-button color="success">
+    <ion-button 
+      color="success" 
+      routerLink="/navigation/visitas/visita-inicio" 
+      routerDirection="forward">
       <ion-icon name="trail-sign-outline"></ion-icon>
       Iniciar visita
     </ion-button>
-    <ion-button color="danger">
+    <ion-button 
+      color="danger"
+      routerLink="/navigation/visitas/visita-fim" 
+      routerDirection="forward">
       <ion-icon name="close-outline"></ion-icon>
-      Finalizar visita</ion-button>
-    <ion-button color="tertiary">
+      Finalizar visita
+    </ion-button>
+    <ion-button color="tertiary" 
+      routerLink="/navigation/despesa/despesa-form" 
+      routerDirection="forward">
       <ion-icon name="wallet-outline"></ion-icon>
-      Registrar despesa</ion-button>
-    <ion-button color="tertiary">
+      Registrar despesa
+    </ion-button>
+    <ion-button 
+      color="tertiary"
+      routerLink="/navigation/clientes" 
+      routerDirection="forward">
       <ion-icon name="people-outline"></ion-icon>
       Meus Clientes
     </ion-button>

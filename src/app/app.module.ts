@@ -1,3 +1,4 @@
+import { AlertService } from './services/alert.service';
 import { DespesaService } from './services/domain/despesa.service';
 import { TecnicoService } from './services/domain/tecnico.service';
 import { TabsNavigationPageModule } from './pages/tabs-navigation/tabs-navigation.module';
@@ -15,14 +16,16 @@ import { AppComponent } from './app.component';
 import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
     HttpClientModule, 
     IonicModule.forRoot(),
     AppRoutingModule,
-    TabsNavigationPageModule
+    TabsNavigationPageModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
@@ -30,6 +33,7 @@ import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
     StorageService,
     TecnicoService,
     DespesaService,
+    AlertService,
     AuthInterceptorProvider
   ],
   bootstrap: [AppComponent],

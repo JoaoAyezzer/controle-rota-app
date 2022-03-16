@@ -29,6 +29,14 @@ const routes: Routes = [
         loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilPageModule)
       },
       {
+        path: 'visitas',
+        loadChildren: () => import('../visitas/visitas.module').then(m => m.VisitasPageModule)
+      },
+      {
+        path: 'clientes',
+        loadChildren: () => import('../clientes/clientes.module').then(m => m.ClientesPageModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'

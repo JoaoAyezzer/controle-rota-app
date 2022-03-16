@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+.header{
+    ion-toolbar{
+        ion-img{
+            width: 10rem;
+            margin: auto;
+            padding: 1rem;
+        }
+    }
+}
+.title-page{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1rem;
+    ion-text{
+        position: absolute;
+        margin: 0.6rem 2.5rem;
+    }
+}

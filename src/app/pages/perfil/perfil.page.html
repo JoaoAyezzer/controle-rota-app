@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-icon class="back" name="chevron-back-outline" onclick="window.history.back()"></ion-icon>
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +17,6 @@
   <h2>{{tecnico.tipoTecnico}}</h2>
   <h3>{{ tecnico.email }}</h3>
   <div>
-    <ion-button>Despesas</ion-button>
     <ion-button>Visitas</ion-button>
     <ion-button>Meus Clientes</ion-button>
     <ion-button>Mudar Senha</ion-button>

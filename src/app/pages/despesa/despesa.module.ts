@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +16,7 @@ import { DespesaPage } from './despesa.page';
     DespesaPageRoutingModule,
   ],
   declarations: [
-    DespesaPage,
+    DespesaPage
   ]
 })
 export class DespesaPageModule {}

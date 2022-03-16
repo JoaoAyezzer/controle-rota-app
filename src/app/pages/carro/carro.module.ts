@@ -13,8 +13,11 @@ import { CarroPage } from './carro.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CarroPageRoutingModule
+    CarroPageRoutingModule,
+
   ],
-  declarations: [CarroPage]
+  declarations: [
+    CarroPage,
+  ]
 })
 export class CarroPageModule {}

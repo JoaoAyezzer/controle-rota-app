@@ -20,7 +20,7 @@ export class PerfilPage implements OnInit{
 
   ngOnInit() {
     let localUser = this.storage.getLocalUser();
-    if (localUser && localUser.email) {
+    if (localUser && localUser.email && this.tecnico.id == '') {
       this.tecnicoService.findByEmail(localUser.email)
         .subscribe( response => {
           this.tecnico = response;

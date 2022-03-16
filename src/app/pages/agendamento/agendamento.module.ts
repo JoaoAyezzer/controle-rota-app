@@ -13,8 +13,12 @@ import { AgendamentoPage } from './agendamento.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AgendamentoPageRoutingModule
+    AgendamentoPageRoutingModule,
+
   ],
-  declarations: [AgendamentoPage]
+  declarations: [
+    AgendamentoPage,
+
+  ]
 })
 export class AgendamentoPageModule {}

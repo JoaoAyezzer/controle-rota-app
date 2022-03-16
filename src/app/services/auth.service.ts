@@ -1,3 +1,4 @@
+import { EmailDTO } from './../models/email.dto';
 import { StorageService } from './storage.service';
 import { LocalUser } from './../models/local_user';
 import { API_CONFIG } from './../../config/api.config';
@@ -30,6 +31,15 @@ export class AuthService {
     })
   }
 
+  resetPassword(email: EmailDTO){
+    return this.http.post(`${API_CONFIG.baseUrl}/auth/forgot`,
+     email,
+     {
+      observe: 'response',
+      responseType: 'text'
+    })
+  }
+
   successfulLogin(authorizationValue: string){
     let tok = authorizationValue.substring(7);
     this.jwtPayload = jwt_decode(tok)
@@ -39,6 +49,7 @@ export class AuthService {
     };
     this.storage.setLocalUser(user);
   }
+
   logout(){
     this.storage.setLocalUser(null);
   }
